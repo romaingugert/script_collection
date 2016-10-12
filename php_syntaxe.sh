@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
 PROJECT=$(dirname "$0")
 FILES=`find $PROJECT -name "*\\.php"`
 

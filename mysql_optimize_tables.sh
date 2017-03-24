@@ -69,7 +69,7 @@ display_help() {
 MYSQLCHECK=mysqlcheck
 
 # OPTIONS
-MYSQLCHECKOPTIONS=" --optimize"
+MYSQLCHECKOPTIONS=""
 
 ###############################################################################
 # OPTIONS
@@ -131,4 +131,4 @@ fi
 ###############################################################################
 # OPTIMIZE TABLES
 ###############################################################################
-$MYSQLCHECK $MYSQLCHECKOPTIONS $1
+$MYSQLCHECK $MYSQLCHECKOPTIONS --optimize $1

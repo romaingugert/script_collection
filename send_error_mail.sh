@@ -13,8 +13,8 @@ LOG_FILE="$LOG_DIR/error_log"
 
 trap "rm -rf $LOG_DIR" EXIT
 
-$1 > /dev/null 2> $LOG_FILE
+$@ > /dev/null 2> $LOG_FILE
 
 if [ $? -ne 0 ]; then
-    echo "Une erreur est survenue lors de l'execution du script $1" | mail -a $LOG_FILE -s "[GLOBALIS - Tâche Plannifiée] Alerte" $ALERT_DEST
+    echo "Une erreur est survenue lors de l'execution du script $@" | mail -a $LOG_FILE -s "Alerte" $ALERT_DEST
 fi
